@@ -1,2 +1,4 @@
 # PMRF-IS
 Parallel Markov Random Fields for Image Segmentation
+
+This software performs multi-label segmentation of 2D/3D images. It is highly accurate, results rely on use of an Markov random field (MRF) formulation. It runs in both shared and distributed memory parallel modes. MRF algorithms are powerful tools in image analysis to explore contextual information of data. However, the application of these methods to large data means that alternative approaches must be found to circumvent the NP-hard complexity of the MRF optimization. PMRF-IS overcomes this issue by using graph partitioning. The computational complexity is decreased considerably as the optimization/parameter estimation are executed on small subgraphs. PMRF-IS is a C++ implementation of this new optimization approach. It includes different parallel implementations that can be used: C++11 threads, MPI and OpenMP.
